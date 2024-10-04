@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import 'dashboard.dart';
+
 class login extends StatefulWidget {
   static const String id = 'Login';
   const login({super.key});
@@ -116,7 +118,10 @@ class _loginState extends State<login> {
                          fixedSize: const Size(400, 50),
                         backgroundColor : const Color(0xff5474fc),
                          shape: RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(10))), onPressed: () {  },
+                             borderRadius: BorderRadius.circular(10))),
+                     onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder:(context)=>const Dashboard(),));
+                     },
 
                    ),
                   const SizedBox(height: 20,),
@@ -129,6 +134,24 @@ class _loginState extends State<login> {
                      Text('Register', style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold)),
 
 
+
+                     ],
+
+                   ),
+                  const  SizedBox(height: 40,),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.end,
+                     children: [
+                        FloatingActionButton(
+                         backgroundColor: const Color(0xff5474fc), // Change background color
+                         foregroundColor: Colors.white,
+                          elevation: 6, // Shadow depth
+                          mini: false,
+                          onPressed: () {
+                           // Action for button 1
+                         },
+                         child: const Icon(Icons.chat),
+                       ),
                      ],
                    )
 
