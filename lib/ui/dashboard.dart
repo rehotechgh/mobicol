@@ -59,6 +59,23 @@ class _DashboardState extends State<Dashboard> {
                   )
                 ),
               ),
+              const SizedBox(height:20),
+              Container(
+
+                width: MediaQuery.of(context).size.width,
+                height: 250,
+
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(20),
+                  image: const DecorationImage(
+                    image: AssetImage("images/card.png"), // Your image path here
+                    fit: BoxFit.cover, // You can change this to fit your design
+                  ),
+                  // Curved edges
+                ),
+
+              ),
 
             ]),
       ),
