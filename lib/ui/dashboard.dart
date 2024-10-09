@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mobicol/ui/login.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -116,32 +118,53 @@ class _DashboardState extends State<Dashboard> {
                   borderRadius: BorderRadius.circular(20),
                   // Curved edges
                 ),
-                child:const Padding(
-                    padding:EdgeInsets.all(10),
+                child: Padding(
+                    padding:const EdgeInsets.all(10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                         children:[
                          Padding(
-                           padding: EdgeInsets.all(15.0),
+                           padding: const EdgeInsets.all(15.0),
                            child: Column(children: [
-                             Icon(Icons.add_card_outlined,color: Colors.white),
-                             Text('Deposits',style: TextStyle(color: Colors.white),),
+                             GestureDetector(child: const Icon(Icons.add_card_outlined,color: Colors.white),
+                                 onTap: () {
+                                   // Handle icon tap
+                                   Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => const Dashboard()),
+                                   );
+                                 }),
+                             const Text('Deposits',style: TextStyle(color: Colors.white),),
                            ],),
                          ),
-                          SizedBox(width:20),
+                        const   SizedBox(width:20),
                           Padding(
-                            padding: EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(15.0),
                             child: Column(children: [
-                              Icon(Icons.account_balance_wallet_outlined,color: Colors.white,),
-                              Text('Withdrawals',style: TextStyle(color: Colors.white)),
+                              GestureDetector(child: const Icon(Icons.account_balance_wallet_outlined,color: Colors.white,),
+                              onTap: () {
+                                // Handle icon tap
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                                );
+                              }),
+                             const  Text('Withdrawals',style: TextStyle(color: Colors.white)),
                             ],),
                           ),
-                          SizedBox(width:20),
+                        const  SizedBox(width:20),
                           Padding(
-                            padding: EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(15.0),
                             child: Column(children: [
-                              Icon(Icons.receipt_long,color: Colors.white),
-                              Text('Statements',style: TextStyle(color: Colors.white)),
+                              GestureDetector(child: const Icon(Icons.receipt_long,color: Colors.white),
+                              onTap: () {
+                                // Handle icon tap
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                                );
+                              }),
+                             const Text('Statements',style: TextStyle(color: Colors.white)),
                             ],),
                           ),
 
