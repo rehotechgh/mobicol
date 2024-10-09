@@ -214,7 +214,7 @@ class _DashboardState extends State<Dashboard> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.support_agent_outlined), label: 'Support'),
+              icon: Icon(Icons.file_copy_outlined), label: 'Statment Request'),
           BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Feedback'),
         ],
 
