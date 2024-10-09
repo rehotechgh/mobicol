@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobicol/ui/login.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
@@ -161,19 +162,39 @@ class _DashboardState extends State<Dashboard> {
 
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0, // set the current index
+        selectedItemColor: const Color(0xff5474fc), // color for the selected item
+        unselectedItemColor: Colors.grey, // color for unselected items
+        backgroundColor: Colors.grey[60], // change background color here
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.push(
+                context,
+               MaterialPageRoute(builder: (context) => const Dashboard()),
+              );
+              break;
+            case 1:
+              Navigator.push(
+                context,
+              MaterialPageRoute(builder: (context) => const login()),
+              );
+              break;
+            case 2:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Dashboard()),
+              );
+              break;
+          }
+        },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.support_agent_outlined), label: 'Support'),
           BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Feedback'),
         ],
-        currentIndex: 0, // set the current index
-        selectedItemColor: const Color(0xff5474fc), // color for the selected item
-        unselectedItemColor: Colors.grey, // color for unselected items
-        backgroundColor: Colors.grey[60], // change background color here
-        onTap: (index) {
-          // Handle item tap
-        },
+
       ),
     );
   }
