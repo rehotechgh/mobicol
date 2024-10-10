@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobicol/ui/deposit.dart';
 import 'package:mobicol/ui/login.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -48,7 +49,7 @@ class _DashboardState extends State<Dashboard> {
                       CircleAvatar(
 
                         radius: 40, // Radius of the avatar
-                          backgroundImage: AssetImage("images/kojo.png"),
+                          backgroundImage: AssetImage("images/default.png"),
                         // You can use NetworkImage for images from the internet
                       ),
                       SizedBox(width:10),
@@ -131,7 +132,7 @@ class _DashboardState extends State<Dashboard> {
                                    // Handle icon tap
                                    Navigator.push(
                                      context,
-                                     MaterialPageRoute(builder: (context) => const Dashboard()),
+                                     MaterialPageRoute(builder: (context) => const Deposit()),
                                    );
                                  }),
                              const Text('Deposits',style: TextStyle(color: Colors.white),),
@@ -214,7 +215,7 @@ class _DashboardState extends State<Dashboard> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.file_copy_outlined), label: 'Statment Request'),
+              icon: Icon(Icons.file_copy_outlined), label: 'Statement Request'),
           BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Feedback'),
         ],
 
