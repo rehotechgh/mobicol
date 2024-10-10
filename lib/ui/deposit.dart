@@ -37,9 +37,15 @@ class _DepositState extends State<Deposit> {
               itemCount: posts.length,
               itemBuilder: (context, index) {
                 return ListTile(
+                  leading: const Icon(Icons.article),
                   title: Text(posts[index].title),
                   subtitle: Text(posts[index].body),
+
+                 trailing: const Text('_________'),
+
+
                 );
+
               },
             );
           }
