@@ -6,9 +6,12 @@ class Currentmonth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body:SingleChildScrollView(
-        child: ListView(
-
+      appBar: AppBar(
+        title: const Text('Current Month'),
+      ),
+      body:const SingleChildScrollView(
+        child: Text(
+'text here'
         ),
       ),
     );

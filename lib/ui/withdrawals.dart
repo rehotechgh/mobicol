@@ -5,10 +5,13 @@ class Withdrawals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body:SingleChildScrollView(
-        child: ListView(
-
+    return   Scaffold(
+      appBar: AppBar(
+        title: const Text('Withdrawals'),
+      ),
+      body:const SingleChildScrollView(
+        child: Text(
+            'Current Month'
         ),
       ),
     );
